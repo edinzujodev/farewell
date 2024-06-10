@@ -3,59 +3,362 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flying Dog Animation</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Farewell</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+* {
+    font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+  font-size:10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+	--corPrincipalBico: #FFCF01;
+	--corSecundariaBico: #FFA300;
+	--corTerciariaBico: #D86802;
+
+	--corGalho: #E18541;
+
+	--corPlumaPrimaria: #FFFFFF;
+	--corPlumaSecundaria: #D5E0E4;
+	--corPlumaTerciaria: #364542;
+
+	--corIrisPrimaria: #459DE5;
+	--corRaboPrimaria: #459DE5; 
+	--corRaboSecundaria: #2C73CB;
+}
+
+body {
+	background-color: #3C394F;
+    color:#fff;
+    font-size: 10px;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 30vh;
+	z-index: -99;
+    
+}
+
+.container2 {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -99;
+    width: 100%; /* or a specific width like 80%, 50rem, etc. */
+    max-width: 100%; /* ensures the container does not exceed the viewport width */
+}
+
+.container2 > * {
+    width: 30%; /* Make all child elements take the full width of the container */
+}
+.quote{
+    margin-top:10px;
+    font-style: italic;
+    font-size: 10px;
+    color:#3C394F;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+.quote span {
+    position: absolute;
+    right: 0;
+    padding-right: 10px; /* Optional: Adjust padding as needed */
+}
+
+.blue{
+    margin-top:10px;
+    font-size: 10px;
+    font-style: italic;
+    font-size: 10px;
+    color:#3C394F;
+    background: #faf0b7;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+.scale-container {
+    transform: scale(0.5); /* Adjust the scale as needed */
+}
+.tucano {
+	width: 200px;
+	height: 100px;
+}
+
+.tucano .head {
+	background-color: var(--corPlumaTerciaria);
+	width: 56px;
+	height: 108px;
+	border-radius: 50px 0px 0px 50px;
+	transform: scaleY(-1);
+}
+
+.tucano .head:after {
+	content: "";
+	background-color: var(--corPlumaPrimaria);
+	position: absolute;
+	width: calc(114px / 2);
+	height: 108px;
+	left: 55px;
+	border-radius: 50px 0px 0px 50px;
+	transform: scaleX(-1);
+}
+
+.tucano .head .eye {
+	background-color: var(--corPlumaPrimaria);
+	position: absolute;
+	width: 52px;
+	height: 52px;
+	top: 25px;
+	left: 30px;
+	border-radius: 50px;
+	z-index: 2;
+}
+
+.tucano .head .eye .iris {
+	background-color: var(--corIrisPrimaria);
+	position: absolute;
+	width: 32px;  
+	height: 32px;
+	left: 10px;
+	top: 10px;
+	border-radius: 50px;
+	z-index: 2;
+}
+
+.tucano .head .eye .iris .pupil {
+	background-color: var(--corPlumaTerciaria);
+	position: absolute;
+	width: 16px; 
+	height: 16px; 
+	left: 8px;
+	top: 8px;
+	border-radius: 50px;
+	z-index: 2;
+}
+
+
+.beak {
+	background-color: var(--corPrincipalBico);
+	position: absolute;
+	width: 216px;
+	height: 108px;
+	top: 0;
+	left: 60px;
+	border-radius: 0px 0px 200px 0px;
+	z-index: -1;
+}
+
+.beak:after {
+	content: "";
+	background-color: var(--corSecundariaBico);
+	position: absolute;
+	width: 162px;
+	height: 58px;
+	top: 0;
+	left: 0;
+	border-radius: 0px 0px 200px 0px;
+	z-index: -1;
+}
+
+.beak:before {
+	content: "";
+	background-color: var(--corTerciariaBico);
+	position: absolute;
+	width: 80px;
+	height: 58px;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	box-shadow: 0 3.1em 0 0.1px var(--corSecundariaBico);
+}
+/* BOX-SHADOW INFOS
+	h-shadow: A posição horizontal da sombra.
+	v-shadow: A posição vertical da sombra.
+	blur: O desfoque da sombra (opcional).
+	spread: O espalhamento da sombra (opcional).
+	color: A cor da sombra.*/
+.body {
+	background-color: var(--corPlumaTerciaria);
+	position: absolute;
+	width: 136px;
+	height: 136px;
+	top: 95px;
+	left: -10px;
+	border-radius: 70px 70px;
+	z-index: -1;
+}
+
+.wings {
+	background-color: var(--corPlumaTerciaria);
+	position: absolute;
+	width: 200px;
+	height: 70px;
+	top: 105px;
+	left: -40px;
+	border-radius: 0px 0px 70px 70px;
+	z-index: -1;
+}
+
+.tail {
+	background-color: var(--corPlumaTerciaria);
+	position: absolute;
+	width: 110px;
+	height: 45px;
+	top: 210px;
+	border-radius: 75px 75px 0px 0px;
+}
+
+.tail:after {
+	content: "";
+	background-color: var(--corRaboPrimaria);
+	position: absolute;
+	width: 35px;
+	height: 30px;
+	top: 15px;
+	left: 20px;
+	border-radius: 75px 0px 0px 0px;
+	z-index: 3;
+}
+
+.tail:before {
+	content: "";
+	background-color: var(--corRaboSecundaria);
+	position: absolute;
+	width: 35px;
+	height: 30px;
+	top: 15px;
+	left: 50px;
+	border-radius: 0px 75px 0px 0px;
+	z-index: 3;
+}
+
+.stick {
+	background-color: var(--corGalho);
+	position: absolute;
+	width: 270px;
+	height: 20px;
+	top: 210px;
+	left: -20px;
+	z-index: 3;
+}
+
+
+blockquote {
+	font-weight: 100;
+	font-size: 2rem;
+	max-width: 600px;
+	line-height: 1.4;
+	position: relative;
+	margin: 0;
+	padding: .5rem;
+}
+
+blockquote:before,
+blockquote:after {
+	position: absolute;
+	color: #f1efe6;
+	font-size: 8rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+blockquote:before {
+	content: '“';
+	left: -5rem;
+	top: -2rem;
+}
+
+blockquote:after {
+	content: '”';
+	right: -5rem;
+	bottom: 1rem;
+}
+
+cite {
+	line-height: 3;
+	text-align: left;
+}
+
+    </style>
 </head>
 <body>
-    <div>
-    <span class="cloud cloud-fg cloud1"></span>
-    <span class="cloud cloud-fg cloud2"></span>
-    <span class="cloud cloud-fg cloud3"></span>
-    <div class="dog">
-        <span class="wing wing2">
-            <span class="feather"></span>
-            <span class="feather"></span>
-            <span class="feather"></span>
-            <span class="feather"></span>
-            <span class="feather"></span>
-        </span>
-        <span class="shoulder shoulder3">
-            <span class="paw paw3"></span>
-            <span class="leg leg3"></span>
-        </span>
-        <span class="body body1"></span>
-        <span class="body body2"></span>
-        <span class="body body3"></span>
-        <span class="body body4"></span>
-        <span class="head darkergray head2"></span>
-        <span class="head gray head1"></span>
-        <span class="head head3"></span>
-        <span class="head head4"></span>
-        <span class="head head5"></span>
-        <span class="ear"></span>
-        <span class="eye"></span>
-        <span class="nose"></span>
-        <span class="tail"></span>
-        <span class="shoulder shoulder1">
-            <span class="paw paw1"></span>
-            <span class="leg leg1"></span>
-        </span>
-        <span class="shoulder shoulder2">
-            <span class="paw paw2"></span>
-            <span class="leg leg2"></span>
-        </span>
-        <span class="wing wing1">
-            <span class="feather"></span>
-            <span class="feather"></span>
-            <span class="feather"></span>
-            <span class="feather"></span>
-            <span class="feather"></span>
-        </span>
+    <div class="container">
+        <div class="scale-container">
+            <div class="tucano">
+                <div class="head">
+                    <div class="eye">
+                        <div class="iris">
+                            <div class="pupil"></div>
+                        </div>
+                    </div>
+                    <div class="beak"></div>
+                </div>
+                <div class="body"></div>
+                <div class="wings"></div>
+                <div class="tail"></div>
+
+                <div class="baby-body">
+                    <div class="eye"></div>
+                </div>
+
+                <div class="stick"></div>
+            </div>
+        </div>
     </div>
-      
-    <span class="cloud cloud-fg cloud4"></span>
-    <span class="cloud cloud-fg cloud5"></span>
+    <div class="container2">
+        <div class="blue">
+        <p>So Emire, we heard you are leaving. I hope this Tuckan makes everything ok.</p>
+        <p>No?</p>
+        <p>Ok. Here are some nice things that people said about you.</p>
+        </div>
+        
+        <p class="quote">
+            "Thanks for being such a chill pill!<br>
+            Let's find out if you are always as chill as at work!<br>
+            Ready to test whether you can stay relaxed in any situation?<br>
+            You better carry the team like you do at work!<br>
+            Whether alone or in a team you will get the job done!"<br>
+            <span>Cassy</span>
+        </p>
+        <p class="quote">
+            "Always sees the world from a low camera perspective, but delivers the highest performance!
+            Don't worry – just debug!
+            Bugs are just puzzles for programmers, challenging us to play detective in the world's quirkiest escape room"<br>
+            <span>Sarah</span>
+        </p>
+        <p style="margin-top:10px">Also by Sarah</p>
+        <img width="200" src="https://i.ibb.co/gDxWQJR/425ef912-238c-400a-b6da-b89a35c9ae0d.png">
+        <p class="quote">
+            "Hey hey,<br>
+            I'm just catching up with your messages...<br>             
+            Of course, I'm happy to pay my share of the gift card. Cassandra Kind | sun-X GmbH is it ok if I PayPal you and you organize it?<br>             
+            Don't know for the quotes, because your quotes were really cool. Can we take one for all of us? Or what's the idea?"<br>
+            <span>Tobi</span>
+        </p>
+        <p class="quote">
+            "Dude, I truly has been a pleasure working with you. You made the terrible code bearable.<br>
+            I loved working with you and I will prob miss you for like two or three days.<br>
+            We will always have genious 1 and genious 2 code to laugh about."<br>
+            <span>Zujo</span>
+        </p>
+        <div class="blue">
+        <p>Also, we are not cheepass bums, here is a xbox-live gift card: BZAWK-7JMYM-U9F9A-JAJKA-9ZAWC</p>
+        <p>Not working? Oh yeah you need a cypher for it...</p>
+        </div>
     </div>
-    <div stlye="margin-top">So Emire, you are leaving. Here is a flying dog.</div>
 </body>
 </html>
