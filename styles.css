@@ -1,0 +1,507 @@
+.white {
+  background-color: white !important;
+}
+
+.darkwhite {
+  background-color: #f7f7f7 !important;
+}
+
+.darkerwhite {
+  background-color: #eaeaea !important;
+}
+
+.gray {
+  background-color: #7d7d7d !important;
+}
+
+.darkgray {
+  background-color: #636363 !important;
+}
+
+.darkergray {
+  background-color: #535353 !important;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9eecff;
+  margin: 0;
+  overflow: hidden;
+}
+
+.dog {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  left: 30px;
+  top: 60px;
+  animation: upNdown 5s ease-in-out infinite;
+}
+.dog * {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.body {
+  background-color: #7d7d7d;
+}
+
+.body1 {
+  width: 117%;
+  height: 60%;
+  border-radius: 0 39% 78% 30%/0 32% 60% 60%;
+}
+
+.body2 {
+  width: 80%;
+  height: 30%;
+  top: -5%;
+  left: 3%;
+  transform: rotate(32deg);
+}
+
+.body3 {
+  width: 46%;
+  height: 64%;
+  top: -24%;
+  left: -15%;
+  border-radius: 100% 0 0 0/100% 0 0 0;
+  transform: rotate(-35deg);
+}
+
+.body4 {
+  width: 31%;
+  height: 38%;
+  top: -40%;
+  left: -2%;
+  transform: rotate(-20deg);
+}
+
+.head {
+  background-color: #f7f7f7;
+}
+
+.head1, .head2 {
+  width: 50%;
+  height: 56%;
+  top: -68%;
+  left: -17%;
+  border-radius: 41% 53% 21% 0/26% 33% 63% 0;
+}
+
+.head2 {
+  top: -72%;
+  left: -22%;
+}
+
+.head3 {
+  width: 50%;
+  height: 50%;
+  top: -56%;
+  left: -60%;
+  transform: rotate(-16deg);
+  border-radius: 20% 10% 10% 20%/40% 41% 50% 60%;
+}
+
+.head4 {
+  width: 10%;
+  height: 10%;
+  top: -10%;
+  left: -46%;
+  transform: rotate(-45deg);
+  border-radius: 0% 0% 0% 36%/0% 0% 0% 20%;
+}
+
+.head5 {
+  width: 27%;
+  height: 20%;
+  top: -23%;
+  left: -44%;
+  transform: rotate(23deg);
+  border-radius: 0% 0% 66% 0%/0% 0% 20% 0%;
+}
+
+.ear {
+  background-color: #636363;
+  width: 30%;
+  height: 30%;
+  top: -80%;
+  left: -1%;
+  border-radius: 120% 30% 30% 30%/120% 30% 30% 30%;
+  transform: rotate(45deg);
+}
+
+.eye {
+  background-color: black;
+  width: 13%;
+  height: 13%;
+  top: -57%;
+  left: -21%;
+  border-radius: 100%;
+  animation: blink 10s linear infinite;
+}
+
+.nose {
+  background-color: black;
+  width: 12%;
+  height: 14%;
+  top: -50%;
+  left: -61%;
+  border-radius: 33% 12% 80% 11%/60% 13% 80% 10%;
+}
+
+.tail {
+  background-color: #7d7d7d;
+  width: 9%;
+  height: 13%;
+  top: 0%;
+  left: 107%;
+  transform: rotate(55deg);
+  border-radius: 10% 30% 0% 0%/70% 60% 0% 0%;
+  transform-origin: 30% 80%;
+  animation: wiggle 0.5s ease-out infinite;
+}
+.tail::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: inherit;
+  border: inherit;
+  width: 82%;
+  height: 80%;
+  left: 5%;
+  top: -58%;
+  transform: rotate(-10deg);
+  border-radius: 40% 40% 0% 0%/70% 60% 0% 0%;
+  animation: wiggle2 0.5s ease-out infinite;
+  transform-origin: 30% 80%;
+  animation-delay: 0.1s;
+}
+
+.shoulder {
+  background-color: #636363;
+}
+
+.shoulder1, .shoulder3 {
+  width: 30%;
+  height: 38%;
+  top: 24%;
+  left: 19%;
+  border-radius: 50% 40% 40% 36%/40% 40% 40% 40%;
+  transform: rotate(-38deg);
+  animation: shoulder1Hang 5s ease-out infinite;
+}
+
+.shoulder2 {
+  width: 28%;
+  height: 41%;
+  top: 21%;
+  left: 78%;
+  border-radius: 62% 60% 30% 60%/66% 40% 50% 30%;
+  transform: rotate(-120deg);
+  animation: shoulder2Hang 5s ease-out infinite;
+}
+
+.shoulder3 {
+  left: 0;
+  animation-delay: 0.15s;
+  background-color: #535353;
+}
+
+.leg {
+  background-color: #636363;
+}
+
+.leg1, .leg3 {
+  width: 63%;
+  height: 111%;
+  top: 17%;
+  left: -50%;
+  border-radius: 30% 70% 0% 0%/20% 80% 0% 0%;
+  transform: rotate(-87deg);
+}
+
+.leg2 {
+  width: 63%;
+  height: 111%;
+  top: -20%;
+  left: -30%;
+  border-radius: 72% 30% 80% 40%/90% 60% 50% 30%;
+  transform: rotate(-120deg);
+}
+
+.leg3 {
+  background-color: #535353;
+}
+
+.paw {
+  background-color: #f7f7f7;
+}
+
+.paw1, .paw3 {
+  width: 40%;
+  height: 56%;
+  transform: rotate(4deg);
+  top: 64%;
+  left: -89%;
+  border-radius: 80% 0% 40% 61%/60% 0% 20% 90%;
+}
+
+.paw2 {
+  width: 45%;
+  height: 35%;
+  transform: rotate(-44deg);
+  top: 16%;
+  left: -93%;
+  border-radius: 39% 50% 0% 0%/20% 110% 0% 0%;
+}
+
+.paw3 {
+  background-color: #eaeaea;
+}
+
+.wing1 {
+  width: 100%;
+  height: 100%;
+  top: -90%;
+  left: 37%;
+  transform-origin: 5% 90%;
+  transform: rotate(20deg);
+  animation: flap 5s ease-in-out infinite;
+  animation-delay: -0.15s;
+}
+
+.wing2 {
+  width: 90%;
+  height: 90%;
+  top: -88%;
+  left: 22%;
+  transform-origin: 5% 90%;
+  transform: rotate(20deg);
+  animation: flap 5s ease-in-out infinite;
+  animation-delay: 0.15s;
+}
+.wing2 .feather {
+  background-color: #eaeaea;
+}
+
+.feather {
+  transform-origin: 4% -28%;
+  width: 69%;
+  height: 10%;
+  top: 90%;
+  left: 0;
+  background-color: #f7f7f7;
+}
+
+.feather:nth-child(1) {
+  border-radius: 20% 50% 60% 20%/60% 60% 60% 60%;
+  transform: rotate(-10deg) scale(1.15);
+}
+
+.feather:nth-child(2) {
+  border-radius: 20% 50% 60% 20%/60% 60% 60% 60%;
+  transform: rotate(-20deg) scale(1.3);
+}
+
+.feather:nth-child(3) {
+  border-radius: 20% 50% 60% 20%/60% 60% 60% 60%;
+  transform: rotate(-30deg) scale(1.45);
+}
+
+.feather:nth-child(4) {
+  border-radius: 20% 50% 60% 20%/60% 60% 60% 60%;
+  transform: rotate(-40deg) scale(1.6);
+}
+
+.feather:nth-child(5) {
+  border-radius: 20% 50% 60% 20%/60% 60% 60% 60%;
+  transform: rotate(-50deg) scale(1.75);
+}
+
+.cloud {
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: white;
+  left: 0%;
+  top: 0%;
+  animation: moveRight linear infinite;
+}
+.cloud::after {
+  content: "";
+  position: inherit;
+  width: 100%;
+  height: 90%;
+  border-radius: inherit;
+  background-color: white;
+  left: 43%;
+  top: 33%;
+}
+.cloud::before {
+  content: "";
+  position: inherit;
+  width: 70%;
+  height: 80%;
+  border-radius: inherit;
+  background-color: white;
+  left: 44%;
+  top: -32%;
+}
+
+.cloud1 {
+  top: 5%;
+  left: -15%;
+  transform: scale(2);
+  animation-delay: -2s;
+  animation-duration: 9s;
+}
+
+.cloud2 {
+  top: 25%;
+  left: -25%;
+  transform: scale(3);
+  animation-delay: -3s;
+  animation-duration: 8s;
+}
+
+.cloud3 {
+  top: 45%;
+  left: -35%;
+  transform: scale(4);
+  animation-delay: -4.5s;
+  animation-duration: 7s;
+}
+
+.cloud4 {
+  top: 65%;
+  left: -45%;
+  transform: scale(5);
+  animation-delay: -2.5s;
+  animation-duration: 6s;
+}
+
+.cloud5 {
+  top: 85%;
+  left: -55%;
+  transform: scale(6);
+  animation-delay: -4.5s;
+  animation-duration: 5s;
+}
+
+@keyframes upNdown {
+  50% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: transateY(-320%);
+  }
+}
+@keyframes shoulder1Hang {
+  50% {
+    transform: rotate(-18deg);
+  }
+  100% {
+    transform: rotate(-38deg);
+  }
+}
+@keyframes shoulder2Hang {
+  50% {
+    transform: rotate(-130deg);
+  }
+  100% {
+    transform: rotate(-120deg);
+  }
+}
+@keyframes flap {
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+@keyframes blink {
+  1% {
+    transform: scaleY(0.1);
+  }
+  2% {
+    transform: scaleY(1);
+  }
+  15% {
+    transform: scaleY(1);
+  }
+  16% {
+    transform: scaleY(0.1);
+  }
+  17% {
+    transform: scaleY(1);
+  }
+  28% {
+    transform: scaleY(1);
+  }
+  29% {
+    transform: scaleY(0.1);
+  }
+  30% {
+    transform: scaleY(1);
+  }
+  31% {
+    transform: scaleY(1);
+  }
+  32% {
+    transform: scaleY(0.1);
+  }
+  33% {
+    transform: scaleY(1);
+  }
+  75% {
+    transform: scaleY(1);
+  }
+  76% {
+    transform: scaleY(0.1);
+  }
+  77% {
+    transform: scaleY(1);
+  }
+}
+@keyframes wiggle {
+  50% {
+    transform: rotate(75deg);
+  }
+  100% {
+    transform: rotate(55deg);
+  }
+}
+@keyframes wiggle2 {
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+@keyframes moveRight {
+  100% {
+    left: 200vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .dog {
+    width: 100px;
+    height: 100px;
+    left: 16.6666666667px;
+    top: 33.3333333333px;
+  }
+
+  .cloud {
+    width: 25px;
+    height: 12.5px;
+  }
+}
